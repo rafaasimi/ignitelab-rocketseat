@@ -31,9 +31,11 @@ export function Lesson(props: LessonProps) {
 
       <div
         className={classNames(
-          "rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500",
+          "relative rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500",
           {
             "bg-green-500": isActiveLesson,
+            "before:content-[''] before:absolute before:bg-green-500 before:rotate-45 before:rounded-b-sm before:w-[14px] before:h-[14px] before:left-[-7px] before:top-[50%] before:translate-y-[-50%]":
+              isActiveLesson,
           }
         )}
       >
